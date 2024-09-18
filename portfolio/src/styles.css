@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #222;
+}
+
+#header-image {
+  width: 100%;
+  height: auto;
+}
+
+.navbar {
+  font-family: 'Acme', sans-serif;
+  font-size: 64px;
+  text-align: center;
+  /* float:none;
+  margin:0 auto;
+  display: block; */
+}
+
+.nav-link {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  color: #e6f2ff!important;
+}
+
+.navbar #brand,
+.nav-link:hover {
+  color: #e6f2ff;
+  text-shadow:
+  0px 0px 10px #3399ff,
+  0px 0px 20px #3399ff,
+  0px 0px 30px #3399ff,
+  0px 0px 40px #3399ff,
+  0px 0px 80px #3399ff;
+}
+.active {
+  color: darkmagenta !important;
+}
+
+strong {
+  color: #7b32c9;
+}
+
+#contact {
+  margin: 30px;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 20px;
+}
+
+#aboutme {
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 20px;
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+   "picture aboutme"
+   ". resume";
+}
+
+#profilepic {
+  grid-area: 'picture';
+  justify-self: center;
+  align-self: center;
+}
+
+#summary {
+  grid-area: "summary";
+  color:#fcd7e9;
+}
+
+#resume {
+  grid-area: -2 / -2 / -1 / -1;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #ff57a8;
+  text-decoration: none;
+}
+
+#projects {
+  margin: 30px;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.list-of-projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.first-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.second-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.third-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.fourth-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+}
+
+i {
+  margin-right: 5px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+footer {
+  height: 30px;
+  margin: auto;
+  width: 300px;
+  text-align:center;
+  padding:10px;
+  color: #8a5ebf;
+}
+
+header {
+  height: 200vh;
+}
+
+.container {
+  clip: rect(0, auto, auto, 0);
+  overflow: hidden;
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  width: 100%;
+  mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+}
+
+.container_solid {
+  background: #222;
+  top: 0;
+}
+
+.title_wrapper {
+  position: fixed;
+  display: block;
+  margin: auto;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.title_wrapper h1 {
+  text-align: center;
+  font-size: 64px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+}
+
+.container_solid .title_wrapper h1 {
+  background: url("./images/koreantempleheader.jpg");
+  background-size: 100vw auto;
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 100px;
+  color: black;
+}
+
+.container_image {
+  background-image: url(./images/koreantempleheader.jpg);
+  background-size:100vw auto;
+  background-position: center;
+  background-attachment: fixed;
+  top: 100vh;
+}
+
+.container_image .title_wrapper h1 {
+  color: #222;
+  font-size: 100px;
+}
+
+
+/* floating mask images */
+@keyframes top-bounce {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: -15px;
+  }
+}
+
+.mask-left-bottom-middle {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top:400px;
+  left:50px;
+  transform: rotate(20deg);
+  animation: top-bounce 1s infinite alternate;
+  -webkit-animation: top-bounce 0.6s infinite alternate;
+  z-index: 3;
+}
+.mask-left-bottom-middle:hover {
+  width: 120px;
+}
+
+.mask-left-top {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 200px;
+  left: 170px;
+  transform: rotate(-20deg);
+  animation: top-bounce 1s infinite alternate;
+  -webkit-animation: top-bounce 1s infinite alternate;
+  z-index: 3;
+}
+.mask-left-top:hover {
+  width: 120px;
+}
+
+.mask-left-top-middle {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 70px;
+  left: 350px;
+  transform: rotate(20deg);
+  animation: top-bounce 1s infinite alternate;
+  -webkit-animation: top-bounce 1.2s infinite alternate;
+  z-index: 3;
+}
+.mask-left-top-middle:hover {
+  width: 120px;
+}
+
+.mask-left-middle {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 220px;
+  left: 500px;
+  transform: rotate(-20deg);
+  animation: top-bounce 1s infinite alternate;
+  -webkit-animation: top-bounce 0.7s infinite alternate;
+  z-index: 3;
+}
+.mask-left-middle:hover {
+  width: 120px;
+}
+
+@keyframes bottom-bounce {
+  from {
+    margin-bottom: 0;
+  }
+  to {
+    margin-bottom: -15px;
+  }
+}
+
+.mask-right-middle {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  bottom: 250px;
+  right: 550px;
+  transform: rotate(20deg);
+  animation: bottom-bounce 1s infinite alternate;
+  -webkit-animation: bottom-bounce 1.2s infinite alternate;
+  z-index: 3;
+}
+.mask-right-middle:hover {
+  width: 120px;
+}
+
+.mask-right-top-middle {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  bottom: 90px;
+  right: 350px;
+  transform: rotate(-20deg);
+  animation: bottom-bounce 1s infinite alternate;
+  -webkit-animation: bottom-bounce 0.7s infinite alternate;
+  z-index: 3;
+}
+.mask-right-top-middle:hover {
+  width: 120px;
+}
+
+.mask-right-top {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  bottom: 200px;
+  right: 170px;
+  transform: rotate(20deg);
+  animation: bottom-bounce 1s infinite alternate;
+  -webkit-animation: bottom-bounce 1s infinite alternate;
+  z-index: 3;
+}
+.mask-right-top:hover {
+  width: 120px;
+}
+
+.mask-right-bottom-middle {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  bottom: 400px;
+  right: 50px;
+  transform: rotate(-20deg);
+  animation: bottom-bounce 1s infinite alternate;
+  -webkit-animation: bottom-bounce 0.6s infinite alternate;
+  z-index: 3;
+}
+.mask-right-bottom-middle:hover {
+  width: 120px;
+}
+
+.carousel {
+  width: 900px;
+  height: 500px;
+  margin: 30px;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
